@@ -1,0 +1,17 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.month-summary-box {
+    text-align: center;
+    left: 200px;
+
+}
+
+
+.week1,.week2,.week3,.week4{
+    text-align: center;
+}

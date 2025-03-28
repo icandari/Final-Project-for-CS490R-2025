@@ -1,0 +1,278 @@
+{
+  "month": "March",
+  "year": 2025,
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "days": [
+        {
+          "day": "Monday",
+          "date": "2025-03-03",
+          "meals": {
+            "breakfast": 450,
+            "lunch": 680,
+            "dinner": 750
+          }
+        },
+        {
+          "day": "Tuesday",
+          "date": "2025-03-04",
+          "meals": {
+            "breakfast": 380,
+            "lunch": 630,
+            "dinner": 820
+          }
+        },
+        {
+          "day": "Wednesday",
+          "date": "2025-03-05",
+          "meals": {
+            "breakfast": 420,
+            "lunch": 720,
+            "dinner": 650
+          }
+        },
+        {
+          "day": "Thursday",
+          "date": "2025-03-06",
+          "meals": {
+            "breakfast": 350,
+            "lunch": 580,
+            "dinner": 780
+          }
+        },
+        {
+          "day": "Friday",
+          "date": "2025-03-07",
+          "meals": {
+            "breakfast": 520,
+            "lunch": 760,
+            "dinner": 920
+          }
+        },
+        {
+          "day": "Saturday",
+          "date": "2025-03-08",
+          "meals": {
+            "breakfast": 620,
+            "lunch": 850,
+            "dinner": 970
+          }
+        },
+        {
+          "day": "Sunday",
+          "date": "2025-03-09",
+          "meals": {
+            "breakfast": 580,
+            "lunch": 740,
+            "dinner": 890
+          }
+        }
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "days": [
+        {
+          "day": "Monday",
+          "date": "2025-03-10",
+          "meals": {
+            "breakfast": 410,
+            "lunch": 620,
+            "dinner": 730
+          }
+        },
+        {
+          "day": "Tuesday",
+          "date": "2025-03-11",
+          "meals": {
+            "breakfast": 320,
+            "lunch": 590,
+            "dinner": 790
+          }
+        },
+        {
+          "day": "Wednesday",
+          "date": "2025-03-12",
+          "meals": {
+            "breakfast": 0,
+            "lunch": 650,
+            "dinner": 820
+          }
+        },
+        {
+          "day": "Thursday",
+          "date": "2025-03-13",
+          "meals": {
+            "breakfast": 380,
+            "lunch": 640,
+            "dinner": 760
+          }
+        },
+        {
+          "day": "Friday",
+          "date": "2025-03-14",
+          "meals": {
+            "breakfast": 420,
+            "lunch": 700,
+            "dinner": 950
+          }
+        },
+        {
+          "day": "Saturday",
+          "date": "2025-03-15",
+          "meals": {
+            "breakfast": 570,
+            "lunch": 890,
+            "dinner": 1050
+          }
+        },
+        {
+          "day": "Sunday",
+          "date": "2025-03-16",
+          "meals": {
+            "breakfast": 550,
+            "lunch": 810,
+            "dinner": 920
+          }
+        }
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "days": [
+        {
+          "day": "Monday",
+          "date": "2025-03-17",
+          "meals": {
+            "breakfast": 430,
+            "lunch": 580,
+            "dinner": 710
+          }
+        },
+        {
+          "day": "Tuesday",
+          "date": "2025-03-18",
+          "meals": {
+            "breakfast": 350,
+            "lunch": 620,
+            "dinner": 740
+          }
+        },
+        {
+          "day": "Wednesday",
+          "date": "2025-03-19",
+          "meals": {
+            "breakfast": 390,
+            "lunch": 650,
+            "dinner": 780
+          }
+        },
+        {
+          "day": "Thursday",
+          "date": "2025-03-20",
+          "meals": {
+            "breakfast": 370,
+            "lunch": 510,
+            "dinner": 690
+          }
+        },
+        {
+          "day": "Friday",
+          "date": "2025-03-21",
+          "meals": {
+            "breakfast": 420,
+            "lunch": 0,
+            "dinner": 880
+          }
+        },
+        {
+          "day": "Saturday",
+          "date": "2025-03-22",
+          "meals": {
+            "breakfast": 590,
+            "lunch": 820,
+            "dinner": 990
+          }
+        },
+        {
+          "day": "Sunday",
+          "date": "2025-03-23",
+          "meals": {
+            "breakfast": 560,
+            "lunch": 780,
+            "dinner": 900
+          }
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "days": [
+        {
+          "day": "Monday",
+          "date": "2025-03-24",
+          "meals": {
+            "breakfast": 400,
+            "lunch": 600,
+            "dinner": 720
+          }
+        },
+        {
+          "day": "Tuesday",
+          "date": "2025-03-25",
+          "meals": {
+            "breakfast": 370,
+            "lunch": 580,
+            "dinner": 750
+          }
+        },
+        {
+          "day": "Wednesday",
+          "date": "2025-03-26",
+          "meals": {
+            "breakfast": 410,
+            "lunch": 630,
+            "dinner": 770
+          }
+        },
+        {
+          "day": "Thursday",
+          "date": "2025-03-27",
+          "meals": {
+            "breakfast": 380,
+            "lunch": 590,
+            "dinner": 740
+          }
+        },
+        {
+          "day": "Friday",
+          "date": "2025-03-28",
+          "meals": {
+            "breakfast": 450,
+            "lunch": 670,
+            "dinner": 850
+          }
+        },
+        {
+          "day": "Saturday",
+          "date": "2025-03-29",
+          "meals": {
+            "breakfast": 540,
+            "lunch": 800,
+            "dinner": 980
+          }
+        },
+        {
+          "day": "Sunday",
+          "date": "2025-03-30",
+          "meals": {
+            "breakfast": 520,
+            "lunch": 760,
+            "dinner": 910
+          }
+        }
+      ]
+    }
+  ]
+}
