@@ -1,15 +1,14 @@
-
 const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = 4000;
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the root directory instead of public
+app.use(express.static(path.join(__dirname)));
 
-// Route all requests to index.html
+// Route all requests to index.html in the root directory
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start server
