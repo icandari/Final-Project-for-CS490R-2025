@@ -1,17 +1,325 @@
 body {
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .month-summary-box {
-    text-align: center;
-    left: 200px;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
 }
 
-
-.week1,.week2,.week3,.week4{
+#week1, #week2, #week3, #week4 {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#week1:hover, #week2:hover, #week3:hover, #week4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+[id$="-title"] {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+[id$="-total-calories"] {
+    color: #6a11cb;
+    font-size: 16px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.profile-section h1 {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.month-goal, .meal-streak, .meals-eaten {
+    display: flex;
+    width: 70px;
+    height: 70px;
+}
+
+.header-bar img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.goal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.month-goal, .meal-streak {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.meals-eaten {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.month-goal img, .meal-streak img, .meals-eaten img {
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+}
+
+.goal-container h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+}
+
+#week-summary {
+    text-align: center;
+}
+
+.heatmap-container {
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(7, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.heatmap-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.heatmap-label {
+    font-weight: bold;
+    padding: 10px;
+    text-align: right;
+}
+
+.heatmap-cell {
+    aspect-ratio: 1 / 1;
+    min-height: 60px;
+    max-height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.heatmap-cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.calorie-value {
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.heatmap-cell:hover .calorie-value {
+    opacity: 1;
+}
+
+.week-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 28px;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #6a11cb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5200a3;
+    transform: translateX(-5px);
+}
+
+.back-button span {
+    font-size: 16px;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.light-blue { background-color: #c2e6c0; }
+.medium-blue { background-color: #7ac278; }
+.dark-blue { background-color: #4d9c49; }
+.navy-blue { background-color: #2e7d32; }
+
+.range-filter {
+  margin: 40px auto 30px;
+  text-align: center;
+}
+
+.range-filter h3 {
+  margin-bottom: 15px;
+}
+
+.filter-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-inputs input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.highlight-button {
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.highlight-button:hover {
+  background-color: #5200a3;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}
+
+.highlighted-cell {
+  box-shadow: 0 0 0 3px #ffeb3b !important;
+  transform: scale(1.05);
+  z-index: 3;
 }

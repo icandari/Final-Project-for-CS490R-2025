@@ -4,42 +4,64 @@
         <title>Calorie Counter</title>
         <script src='./js/script.js'></script>
         <link rel="stylesheet" href="./css/style.css">
-        <div class='header-bar'>
-            <img src="./assets/logo.png" alt="">
-            <span>logout</span>
-        </div>
     </head>
     <body>
-        <h1>Welcome</h1>
-        <div class='month-summary-box'>
-            <a href="./weekdetails.html?week=1">
-                <div id="week1">
-                    <span id='week1-title'>Week 1</span>
-                    <span id='week1-total-calories'></span>
+        <div class="container">
+            
+            <div class="profile-section">
+                <img src="./assets/profilepic.jpg" alt="profile pic">
+                <h1>Welcome</h1>
+            </div>
+            <div class="goal-container">
+                <div class="month-goal">
+                    <img src="./assets/1.png" alt="">
+                    <h3>Monthly Calorie Intake Goal: 900 Calories</h3>
                 </div>
-            </a>
+                <div class="meal-streak">
+                    <img src="./assets/3.png" alt="">
+                    <h3>Meal Streak: 5 Days</h3>
+                </div>
+                <div class="meals-eaten">
+                    <img src="./assets/2.png" alt="">
+                    <h3>Meals Eaten This Week: 18/21</h3>
+                </div>
+               
+                
+               
+            </div>
 
-            <a href="./weekdetails.html?week=2">
-                <div id="week2">
-                    <span id='week2-title'>Week 2</span>
-                    <span id='week2-total-calories'></span>
-                </div>
-            </a>
-            
-            <a href="./weekdetails.html?week=3">
-                <div id="week3">
-                    <span id='week3-title'>Week 3</span>
-                    <span id='week3-total-calories'></span>
-                </div>
-            </a>
-            
-            <a href="./weekdetails.html?week=4">
-                <div id="week4">
-                    <span id='week4-title'>Week 4</span>
-                    <span id='week4-total-calories'></span>
-                </div>
-            </a>
+            <h3 id="week-summary">Week Summary</h3>
+            <div class='month-summary-box'>
+                
+                <a href="./weekdetails.html?week=1">
+                    <div id="week1">
+
+                        <span id='week1-title'>Week 1</span>
+                        <span id='week1-total-calories'></span>
+                    </div>
+                </a>
+
+                <a href="./weekdetails.html?week=2">
+                    <div id="week2">
+                        <span id='week2-title'>Week 2</span>
+                        <span id='week2-total-calories'></span>
+                    </div>
+                </a>
+                
+                <a href="./weekdetails.html?week=3">
+                    <div id="week3">
+                        <span id='week3-title'>Week 3</span>
+                        <span id='week3-total-calories'></span>
+                    </div>
+                </a>
+                
+                <a href="./weekdetails.html?week=4">
+                    <div id="week4">
+                        <span id='week4-title'>Week 4</span>
+                        <span id='week4-total-calories'></span>
+                    </div>
+                </a>
+            </div>
         </div>
-        
     </body>
 </HTML>

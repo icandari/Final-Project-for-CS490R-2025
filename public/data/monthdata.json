@@ -95,7 +95,7 @@
           "day": "Wednesday",
           "date": "2025-03-12",
           "meals": {
-            "breakfast": 0,
+            "breakfast": 100,
             "lunch": 650,
             "dinner": 820
           }

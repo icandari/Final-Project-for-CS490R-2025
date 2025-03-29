@@ -1,8 +1,7 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
 
     let calorieData;
+    let currentWeek = 0; // 0-indexed (Week 1)
 
     // Fetch the JSON data when the page loads
     fetch('./data/monthdata.json')
@@ -12,12 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Data loaded successfully');
             // Now that data is loaded, calculate and display weekly totals
             displayWeekTotals();
+            setupWeekNavigation();
         })
         .catch(error => {
             console.error('Error loading calorie data:', error);
         });
-
-    
 
     // Function to display weekly totals in the HTML
     function displayWeekTotals() {
@@ -64,5 +62,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         return weekTotalArray;
+    }
+
+    // Setup navigation arrows
+    function setupWeekNavigation() {
+        const prevButton = document.getElementById('prev-week');
+        const nextButton = document.getElementById('next-week');
+        const weekSlider = document.getElementById('week-slider');
+        
+        // Initially show first week
+        updateSliderPosition();
+        
+        // Arrow click handlers
+        prevButton.addEventListener('click', function() {
+            if (currentWeek > 0) {
+                currentWeek--;
+                updateSliderPosition();
+            }
+        });
+        
+        nextButton.addEventListener('click', function() {
+            if (currentWeek < 3) {
+                currentWeek++;
+                updateSliderPosition();
+            }
+        });
+        
+        // Add click handler to navigate to week details
+        document.querySelectorAll('.week-slide').forEach(slide => {
+            slide.addEventListener('click', function() {
+                const weekNum = this.getAttribute('data-week');
+                window.location.href = `./weekdetails.html?week=${weekNum}`;
+            });
+        });
+        
+        function updateSliderPosition() {
+            // Update slider position
+            weekSlider.style.transform = `translateX(-${currentWeek * 100}%)`;
+            
+            // Update button states
+            prevButton.disabled = currentWeek === 0;
+            nextButton.disabled = currentWeek === 3;
+            
+            // Apply visual indication for disabled buttons
+            prevButton.style.opacity = currentWeek === 0 ? 0.5 : 1;
+            nextButton.style.opacity = currentWeek === 3 ? 0.5 : 1;
+        }
     }
 });
