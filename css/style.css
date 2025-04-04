@@ -26,12 +26,20 @@ body {
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid #6a11cb;
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
+}
+
+.profile-section h1{
+    margin-left: 10px;
+}
+
+h3 {
+    font-weight: bold;
 }
 
 .month-summary-box {
@@ -74,6 +82,9 @@ a {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    line-break: anywhere;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
 .profile-section img {
@@ -96,6 +107,7 @@ a {
     display: flex;
     width: 70px;
     height: 70px;
+    font-weight: bold;
 }
 
 .header-bar img {
@@ -109,6 +121,7 @@ a {
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 20px;
+    margin-left: 5%;
 }
 
 .month-goal, .meal-streak {
@@ -121,6 +134,7 @@ a {
 
 .meals-eaten {
     display: flex;
+    font-weight: bold;
     align-items: center;
     width: 100%;
     border-radius: 10px;
@@ -136,7 +150,7 @@ a {
 .goal-container h3 {
     margin: 0;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     font-family: Arial, sans-serif;
 }
 
@@ -147,6 +161,7 @@ a {
 .heatmap-container {
     margin: 40px auto;
     max-width: 800px;
+    padding-right: 10px;
 }
 
 .heatmap-grid {
@@ -161,20 +176,25 @@ a {
 .heatmap-header {
     font-weight: bold;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .heatmap-label {
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 5px 10px 0;
     text-align: right;
+    box-sizing: border-box;
 }
 
 .heatmap-cell {
     aspect-ratio: 1 / 1;
-    min-height: 60px;
-    max-height: 80px;
+    min-height: 35px;
+    max-height: 50px;
     width: auto;
     display: flex;
     align-items: center;
@@ -185,6 +205,9 @@ a {
     font-size: 14px;
     position: relative;
     cursor: pointer;
+    box-sizing: border-box;
+    margin-left: 30px;
+    margin-right: -5px;
 }
 
 .heatmap-cell:hover {
@@ -319,7 +342,7 @@ a {
 }
 
 .highlighted-cell {
-  box-shadow: 0 0 0 3px #ffeb3b !important;
+  box-shadow: 0 0 0 3px #ff3b3b !important;
   transform: scale(1.05);
   z-index: 3;
 }
